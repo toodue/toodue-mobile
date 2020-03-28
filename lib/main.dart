@@ -6,15 +6,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      ),
+          body: Column(children: [
+        Expanded(
+            flex: 8,
+            child: Container(
+                color: Colors.grey,
+                child: Center(
+                  child: Text('TooDue'),
+                ))),
+        Expanded(
+            flex: 1,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                    child: Container(
+                        color: Colors.black,
+                        child: Center(
+                            child: Text(
+                          'Login',
+                          style: TextStyle(color: Colors.white),
+                        ))),
+                  ),
+                  Expanded(
+                      child: Container(
+                          child: Center(child: Text('Sign up'))))
+                ]))
+      ])),
     );
   }
 }
