@@ -2,6 +2,5 @@ os:
     - linux
 before_script:
     - git clone https://github.com/flutter/flutter.git
-    - ./flutter/bin/flutter doctor
 script:
     - ./flutter/bin/flutter test
